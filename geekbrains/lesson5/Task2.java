@@ -4,8 +4,6 @@ import java.io.File;
 
 public class Task2 {
 
-    //TODO: Доработайте класс Tree и метод print который мы разработали на семинаре.
-    // Ваш метод должен распечатать полноценное дерево директорий и файлов относительно корневой директории.
     public static void main(String[] args) {
         print(new File("."), "", true);
     }
@@ -39,7 +37,14 @@ public class Task2 {
                 print(files[i], indent, subDirCounter == subDirTotal);
             }
         }
-
+        // Цикл для файлов
+        for (int i = 0; i < files.length; i++){
+            if (files[i].isFile()){
+                System.out.print(indent);
+                System.out.print((i == files.length - 1) ? "└─" : "├─");
+                System.out.println(files[i].getName());
+            }
     }
 
+}
 }

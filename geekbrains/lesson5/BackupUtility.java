@@ -11,7 +11,7 @@ import java.nio.file.Paths;
 public class BackupUtility {
 
     public static void main(String[] args) {
-        File sourceDir = new File("/workspaces/GB_Java_Core/geekbrains/lesson5/source"); // указанный путь до директории
+        File sourceDir = new File("/workspaces/GB_Java_Core/geekbrains/lesson5/source");
         backupDirectory(sourceDir, "/workspaces/GB_Java_Core/geekbrains/lesson5/backup");
     }
 
