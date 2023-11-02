@@ -5,14 +5,16 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.channels.FileChannel;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
-public class BackupUtility {
+public class Backup {
 
     public static void main(String[] args) {
-        File sourceDir = new File("/workspaces/GB_Java_Core/geekbrains/lesson5/source");
-        backupDirectory(sourceDir, "/workspaces/GB_Java_Core/geekbrains/lesson5/backup");
+        String path = "C:\\HW5\\geekbrains\\lesson5";
+        String backup = "C:\\backup";
+
+        File sourceDir = new File(path);
+        backupDirectory(sourceDir, backup);
+        System.out.println("В директории " +backup + " создан архив всех файлов из директории " + path);
     }
 
     public static void backupDirectory(File sourceDir, String backupPath) {
